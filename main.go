@@ -10,10 +10,11 @@ import (
 
 func indexHandler(w http.ResponseWriter, r *http.Request) {
 	w.Write([]byte("<h1>Hello World!</h1>"))
+
 }
 
 func main() {
-	err := godotenv.Load("PORT")
+	err := godotenv.Load()
 
 	if err != nil {
 		log.Println("Error loading .env file")
